@@ -1,0 +1,22 @@
+{
+  "name": "quickbooks-integrate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-modules src/app.js",
+    "start:watch": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "dotenv": "^10.0.0",
+    "ejs": "2.5.5",
+    "express": "^4.13.3",
+    "lowdb": "^3.0.0",
+    "simple-node-logger": "^21.8.12"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
