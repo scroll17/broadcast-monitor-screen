@@ -1,12 +1,12 @@
 {
-  "name": "quickbooks-integrate",
+  "name": "broadcast-monitor-screen",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "node --experimental-modules src/app.js",
-    "start:watch": "nodemon src/app.js"
+    "start": "node --experimental-modules src/index.js",
+    "start:watch": "nodemon src/index.js"
   },
   "dependencies": {
     "body-parser": "^1.13.3",

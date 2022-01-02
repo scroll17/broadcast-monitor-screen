@@ -20,17 +20,21 @@
         </div>
         <script type="application/javascript">
             const img = document.getElementById('target-img');
-            const url = 'http://<%= locals.ip %>:<%= locals.port %>/broadcast/screen'
+            const url = 'http://<%= locals.ip %>:<%= locals.port %>/api/broadcast/screen'
 
-            const fps = 1 / 10;
-            setInterval(async () => {
-                console.log('REQUEST')
+            const fps = 1 / 20;
+            const intervalId = setInterval(async () => {
+                try {
+                    console.log('REQUEST')
 
-                const response = await fetch(url);
-                const json = await response.json();
+                    const response = await fetch(url);
+                    const json = await response.json();
 
-                console.log('UPDATE SRC')
-                img.src = `data:image/png;base64, ${json.imageData}`
+                    console.log('UPDATE SRC')
+                    img.src = `data:image/png;base64, ${json.imageData}`
+                } catch (e) {
+                    clearInterval(intervalId)
+                }
             }, fps * 1000)
         </script>
     </body>
