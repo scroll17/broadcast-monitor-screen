@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Select expense account</title>
+
+        <style>
+            #list {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #list div {
+                border: 2px solid black;
+                margin: 5px 0 5px 5px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <span>
+                You need select Expense Account. <br/>
+                Our App will use this Account for Actual Cost per Payout Request.
+            </span>
+
+            <p>
+                <label for="input">Find account</label>
+                <input id="input" name="search-account" type="text"/>
+            </p>
+        </div>
+        <script type="application/javascript"></script>
+    </body>
+</html>

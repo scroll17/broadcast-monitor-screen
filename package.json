@@ -14,6 +14,7 @@
     "ejs": "2.5.5",
     "express": "^4.13.3",
     "lowdb": "^3.0.0",
+    "screenshot-desktop": "^1.12.7",
     "simple-node-logger": "^21.8.12"
   },
   "keywords": [],

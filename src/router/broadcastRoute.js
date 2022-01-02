@@ -4,7 +4,7 @@ import express from 'express'
 
 const router = express.Router();
 
-router.get('/:userId', (req, res) => {
+router.get('/', (req, res) => {
     console.info('GET /broadcast/')
     console.info('RENDER index.ejs')
 
