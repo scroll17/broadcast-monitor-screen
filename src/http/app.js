@@ -33,7 +33,7 @@ export async function startupHttpServer() {
 
     const server = app.listen(
         PORT,
-        async () => {
+        () => {
             logger.info(`Express server listening on port ${PORT} (ip = ${getIp()})`);
         }
     );
