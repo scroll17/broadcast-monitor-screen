@@ -8,6 +8,8 @@ import { fileURLToPath } from 'url'
 import router from './router/index.js'
 /*logger*/
 import logger from './logger.js'
+/*utils*/
+import getIp from './utils/getIp.js'
 
 dotenv.config();
 
@@ -37,7 +39,7 @@ app.use((err, req, res, next) => {
 const server = app.listen(
     app.get('port'),
     async () => {
-        logger.info('Express server listening on port ' + app.get('port') + '\n');
+        logger.info(`Express server listening on port ${app.get('port')} (ip = ${getIp()})`);
     }
 );
 
