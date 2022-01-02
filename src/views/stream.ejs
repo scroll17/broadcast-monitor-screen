@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Desktop screen</title>
+
+        <style>
+            #root img {
+                max-width: 1500px;
+                max-height: 1500px;
+
+                border: 2px solid black;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <img id="target-img" src="" alt="Desktop screen" />
+        </div>
+        <script type="application/javascript">
+            const img = document.getElementById('target-img');
+            const url = 'http://<%= locals.ip %>:<%= locals.port %>/broadcast/screen'
+
+            const fps = 1 / 30;
+            setInterval(async () => {
+                console.log('REQUEST')
+
+                const response = await fetch(url);
+                const json = await response.json();
+
+                console.log('UPDATE SRC')
+                img.src = `data:image/png;base64, ${json.imageData}`
+            }, fps * 1000)
+        </script>
+    </body>
+</html>
