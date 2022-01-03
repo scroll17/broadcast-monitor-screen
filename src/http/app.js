@@ -26,8 +26,8 @@ export async function startupHttpServer() {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
 
-    app.use('/', getNavigateRouter())
     app.use('/api', getApiRouter());
+    app.use('/pages', getNavigateRouter())
 
     app.use(mainErrorHandler);
 

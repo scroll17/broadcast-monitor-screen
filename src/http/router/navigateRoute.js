@@ -17,8 +17,8 @@ router.get('/', async (req, res) => {
 })
 
 
-router.get('/screen-page', async (req, res) => {
-    logger.info('GET /screen-page')
+router.get('/screen', async (req, res) => {
+    logger.info('GET /screen')
     logger.info('RENDER screen.ejs')
 
     const screenshotBuffer = await screenshot();
