@@ -4,7 +4,7 @@ import dgram from 'dgram';
 import logger from '../logger.js'
 
 export async function startupUdpServer() {
-    const PORT = 41234
+    const PORT = process.env.UDP_PORT;
     const server = dgram.createSocket('udp4');
 
     server.on('message', (msg, rinfo) => {

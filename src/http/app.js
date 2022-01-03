@@ -15,7 +15,7 @@ import getIp from '../utils/getIp.js'
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export async function startupHttpServer() {
-    const PORT = process.env.PORT;
+    const PORT = process.env.HTTP_PORT;
     const app = express();
 
     app.set('port', PORT)
